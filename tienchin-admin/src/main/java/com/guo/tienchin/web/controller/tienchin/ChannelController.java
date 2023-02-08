@@ -37,7 +37,7 @@ public class ChannelController extends BaseController {
     IChannelService channelService;
 
     /**
-     * 获取用户列表
+     * 获取渠道列表
      */
     @PreAuthorize("hasPermission('tienchin:channel:list')")
     @GetMapping("/list")
@@ -69,7 +69,7 @@ public class ChannelController extends BaseController {
      * @param channelId
      * @return
      */
-    @PreAuthorize("hasPermission('tienchin:channel:list')")
+    @PreAuthorize("hasPermission('tienchin:channel:edit')")
     @GetMapping("/{channelId}")
     public AjaxResult getChannel(@PathVariable Long channelId) {
         return AjaxResult.success(channelService.getById(channelId));

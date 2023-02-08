@@ -218,6 +218,12 @@
                 <artifactId>tienchin-channel</artifactId>
                 <version>${tienchin.version}</version>
             </dependency>
+            <!-- 活动管理-->
+            <dependency>
+                <groupId>com.guo</groupId>
+                <artifactId>tienchin-activity</artifactId>
+                <version>${tienchin.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -229,6 +235,7 @@
         <module>tienchin-generator</module>
         <module>tienchin-common</module>
         <module>tienchin-channel</module>
+        <module>tienchin-activity</module>
     </modules>
     <packaging>pom</packaging>
 

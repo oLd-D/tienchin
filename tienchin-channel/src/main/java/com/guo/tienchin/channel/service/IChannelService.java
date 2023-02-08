@@ -26,4 +26,5 @@ public interface IChannelService extends IService<Channel> {
     boolean deleteChannelByIds(Long[] channelIds);
 
     Boolean importChannel(List<Channel> channelList, boolean updateSupport);
+
 }
