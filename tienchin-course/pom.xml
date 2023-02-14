@@ -9,9 +9,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>tienchin-activity</artifactId>
+    <artifactId>tienchin-course</artifactId>
     <description>
-        活动管理模块
+        课程管理模块
     </description>
 
     <dependencies>

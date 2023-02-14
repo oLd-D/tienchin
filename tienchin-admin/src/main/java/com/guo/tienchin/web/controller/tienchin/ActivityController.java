@@ -1,10 +1,8 @@
 package com.guo.tienchin.web.controller.tienchin;
 
-import com.guo.tienchin.activity.domain.Activity;
 import com.guo.tienchin.activity.domain.vo.ActivityVO;
 import com.guo.tienchin.activity.service.IActivityService;
-import com.guo.tienchin.activity.validator.AddGroup;
-import com.guo.tienchin.channel.domain.Channel;
+import com.guo.tienchin.common.validator.AddGroup;
 import com.guo.tienchin.channel.domain.vo.ChannelVO;
 import com.guo.tienchin.channel.service.IChannelService;
 import com.guo.tienchin.common.annotation.Log;

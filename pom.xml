@@ -224,6 +224,18 @@
                 <artifactId>tienchin-activity</artifactId>
                 <version>${tienchin.version}</version>
             </dependency>
+            <!-- 课程管理-->
+            <dependency>
+                <groupId>com.guo</groupId>
+                <artifactId>tienchin-course</artifactId>
+                <version>${tienchin.version}</version>
+            </dependency>
+            <!-- 线索管理-->
+            <dependency>
+                <groupId>com.guo</groupId>
+                <artifactId>tienchin-clue</artifactId>
+                <version>${tienchin.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -236,6 +248,8 @@
         <module>tienchin-common</module>
         <module>tienchin-channel</module>
         <module>tienchin-activity</module>
+        <module>tienchin-course</module>
+        <module>tienchin-clue</module>
     </modules>
     <packaging>pom</packaging>
 

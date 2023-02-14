@@ -1,10 +1,8 @@
 package com.guo.tienchin.activity.domain.vo;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.guo.tienchin.activity.validator.AddGroup;
-import com.guo.tienchin.activity.validator.EditGroup;
+import com.guo.tienchin.common.validator.AddGroup;
+import com.guo.tienchin.common.validator.EditGroup;
 import com.guo.tienchin.common.annotation.Excel;
 import com.guo.tienchin.common.core.domain.BaseEntity;
 
@@ -87,11 +85,6 @@ public class ActivityVO extends BaseEntity {
     @Excel(name = "活动结束时间",dateFormat = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime endTime;
 
-    /**
-     * 活动备注
-     */
-    @Excel(name = "活动备注")
-    private String remark;
 
 
     private Integer delFlag;
@@ -182,16 +175,6 @@ public class ActivityVO extends BaseEntity {
 
     public void setEndTime(LocalDateTime endTime) {
         this.endTime = endTime;
-    }
-
-    @Override
-    public String getRemark() {
-        return remark;
-    }
-
-    @Override
-    public void setRemark(String remark) {
-        this.remark = remark;
     }
 
     public Integer getDelFlag() {

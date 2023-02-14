@@ -71,6 +71,16 @@
             <groupId>com.guo</groupId>
             <artifactId>tienchin-activity</artifactId>
         </dependency>
+        <!-- 课程管理-->
+        <dependency>
+            <groupId>com.guo</groupId>
+            <artifactId>tienchin-course</artifactId>
+        </dependency>
+        <!-- 线索管理-->
+        <dependency>
+            <groupId>com.guo</groupId>
+            <artifactId>tienchin-clue</artifactId>
+        </dependency>
         <!-- 单元测试 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
