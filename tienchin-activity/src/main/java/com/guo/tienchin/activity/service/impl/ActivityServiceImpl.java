@@ -1,5 +1,6 @@
 package com.guo.tienchin.activity.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.guo.tienchin.activity.domain.Activity;
 import com.guo.tienchin.activity.domain.vo.ActivityVO;
@@ -70,6 +71,13 @@ public class ActivityServiceImpl extends ServiceImpl<ActivityMapper, Activity> i
         UpdateWrapper<Activity> uw = new UpdateWrapper<>();
         uw.lambda().set(Activity::getDelFlag, 1).in(Activity::getActivityId, activityIds);
         return update(uw);
+    }
+
+    @Override
+    public AjaxResult getActivityByChannelId(Integer channelId) {
+        QueryWrapper<Activity> qw = new QueryWrapper<>();
+        qw.lambda().eq(Activity::getChannelId, channelId);
+        return AjaxResult.success(list(qw));
     }
 
 
