@@ -1,5 +1,7 @@
 package com.guo.tienchin.clue.domain.vo;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.time.LocalDateTime;
 
 public class ClueSummary {
@@ -25,7 +27,7 @@ public class ClueSummary {
      */
     private Integer status;
 
-//    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "Asia/Shanghai")
+   // @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "Asia/Shanghai")
     private LocalDateTime createTime;
 
     private String createBy;
