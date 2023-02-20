@@ -2,6 +2,7 @@ package com.guo.tienchin.system.service;
 
 import java.util.List;
 
+import com.guo.tienchin.common.core.domain.AjaxResult;
 import com.guo.tienchin.common.core.domain.entity.SysUser;
 
 /**
@@ -203,4 +204,6 @@ public interface ISysUserService {
      * @return 结果
      */
     public String importUser(List<SysUser> userList, Boolean isUpdateSupport, String operName);
+
+    AjaxResult getUsersByDeptId(Long deptId);
 }

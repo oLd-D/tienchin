@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import javax.validation.Validator;
 
+import com.guo.tienchin.common.core.domain.AjaxResult;
 import com.guo.tienchin.common.core.domain.entity.SysRole;
 import com.guo.tienchin.common.core.domain.entity.SysUser;
 import com.guo.tienchin.system.mapper.SysPostMapper;
@@ -483,5 +484,11 @@ public class SysUserServiceImpl implements ISysUserService {
             successMsg.insert(0, "恭喜您，数据已全部导入成功！共 " + successNum + " 条，数据如下：");
         }
         return successMsg.toString();
+    }
+
+    @Override
+    public AjaxResult getUsersByDeptId(Long deptId) {
+        List<SysUser> users = userMapper.getUsersByDeptId(deptId);
+        return AjaxResult.success(users);
     }
 }
