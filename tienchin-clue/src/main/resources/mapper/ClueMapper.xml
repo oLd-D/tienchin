@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.guo.tienchin.clue.mapper.ClueMapper">
+
+    <select id="selectClueList" resultType="com.guo.tienchin.clue.domain.vo.ClueSummary">
+        SELECT tc.clue_id, tc.name, tch.`channel_name`, tc.`phone`, tc.`status`, tc.`create_time`, tc.`create_by`, tc.next_time, ta.`user_name` AS `owner`
+        FROM tienchin_clue tc
+        LEFT JOIN tienchin_channel tch ON tc.channel_id = tch.`channel_id`
+        LEFT JOIN tienchin_assignment ta ON ta.`assign_id` = tc.`clue_id`  AND ta.`latest`=TRUE
+    </select>
+</mapper>

@@ -142,7 +142,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		select user_id, email from sys_user where email = #{email} and del_flag = '0' limit 1
 	</select>
     <select id="getUsersByDeptId" parameterType="Long" resultMap="SysUserResult">
-		SELECT su.user_id, su.`nick_name`
+		SELECT su.user_id, su.`nick_name`, su.dept_id, su.user_name
 		FROM sys_user su, sys_dept sd
 		WHERE su.`dept_id` = sd.`dept_id` AND ( FIND_IN_SET(#{deptId}, sd.`ancestors`) OR sd.`dept_id` = #{deptId})
 	</select>
