@@ -2,6 +2,7 @@ package com.guo.tienchin.clue.service;
 
 import com.guo.tienchin.clue.domain.Assignment;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.guo.tienchin.common.core.domain.AjaxResult;
 
 /**
  * <p>
@@ -13,4 +14,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface IAssignmentService extends IService<Assignment> {
 
+    AjaxResult assignClue(Assignment assignment);
 }
