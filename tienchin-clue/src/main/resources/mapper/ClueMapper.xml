@@ -8,4 +8,15 @@
         LEFT JOIN tienchin_channel tch ON tc.channel_id = tch.`channel_id`
         LEFT JOIN tienchin_assignment ta ON ta.`assign_id` = tc.`clue_id`  AND ta.`latest`=TRUE
     </select>
+    <select id="getClueDetailsByClueId" resultType="com.guo.tienchin.clue.domain.vo.ClueDetails">
+        SELECT tc.`clue_id`, tc.name, tc.`gender`, tc.`age`, tc.`wechat`, tc.`qq`, tc.`phone`, tc.`level`, tc.`subject`, tc.`status`, tc.`fail_count`,tc.`next_time`,
+               tch.`channel_name`,
+               tas.`create_by` AS allocator, tas.`user_name` AS `owner`, tas.`create_time` AS belong_time, tc.`create_time` AS create_time,
+               ta.`name` AS activity_name, ta.`info` AS activity_info
+        FROM tienchin_clue tc
+                 LEFT JOIN tienchin_activity ta ON tc.`activity_id` = ta.`activity_id`
+                 LEFT JOIN tienchin_channel tch ON tc.`channel_id` = tch.`channel_id`
+                 LEFT JOIN tienchin_assignment tas ON tc.`clue_id` = tas.`assign_id`
+        WHERE tc.`clue_id` = #{clueId} AND tas.`latest` = TRUE
+    </select>
 </mapper>

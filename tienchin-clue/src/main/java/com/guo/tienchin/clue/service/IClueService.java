@@ -20,4 +20,6 @@ public interface IClueService extends IService<Clue> {
     AjaxResult addClue(Clue clue);
 
     List<ClueSummary> selectClueList();
+
+    AjaxResult getClueDetailsByClueId(Long clueId);
 }

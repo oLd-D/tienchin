@@ -71,8 +71,16 @@ public class ClueController extends BaseController {
         return getDataTable(list);
     }
 
+    @PreAuthorize("hasPermission('tienchin:clue:assign')")
     @GetMapping("/users/{deptId}")
     public AjaxResult getUsersByDeptId(@PathVariable Long deptId) {
         return sysUserService.getUsersByDeptId(deptId);
     }
+
+    @PreAuthorize("hasAnyPermission('tienchin:clue:view', 'tienchin:clue:follow')")
+    @GetMapping("/{clueId}")
+    public AjaxResult getClueDetailsByClueId(@PathVariable Long clueId) {
+        return clueService.getClueDetailsByClueId(clueId);
+    }
+
 }

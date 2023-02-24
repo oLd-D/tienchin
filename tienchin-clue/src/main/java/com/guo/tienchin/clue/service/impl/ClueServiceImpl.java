@@ -3,6 +3,7 @@ package com.guo.tienchin.clue.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.guo.tienchin.clue.domain.Assignment;
 import com.guo.tienchin.clue.domain.Clue;
+import com.guo.tienchin.clue.domain.vo.ClueDetails;
 import com.guo.tienchin.clue.domain.vo.ClueSummary;
 import com.guo.tienchin.clue.mapper.ClueMapper;
 import com.guo.tienchin.clue.service.IAssignmentService;
@@ -70,5 +71,11 @@ public class ClueServiceImpl extends ServiceImpl<ClueMapper, Clue> implements IC
     @Override
     public List<ClueSummary> selectClueList() {
         return clueMapper.selectClueList();
+    }
+
+    @Override
+    public AjaxResult getClueDetailsByClueId(Long clueId) {
+        ClueDetails clueDetails = clueMapper.getClueDetailsByClueId(clueId);
+        return AjaxResult.success(clueDetails);
     }
 }
