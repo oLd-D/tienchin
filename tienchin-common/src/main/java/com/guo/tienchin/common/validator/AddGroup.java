@@ -1,5 +1,5 @@
 package com.guo.tienchin.common.validator;
 
-public class AddGroup {
+public interface AddGroup {
 
 }

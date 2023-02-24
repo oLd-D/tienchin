@@ -1,4 +1,4 @@
 package com.guo.tienchin.common.validator;
 
-public class EditGroup {
+public interface EditGroup {
 }
