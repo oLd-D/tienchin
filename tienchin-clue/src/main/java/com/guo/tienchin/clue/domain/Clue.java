@@ -30,7 +30,7 @@ public class Clue implements Serializable {
     /**
      * 客户姓名
      */
-    @NotBlank(message = "{clue.name.notblank}")
+    @NotBlank(message = "{clue.name.notBlank}")
     private String name;
 
     /**
@@ -66,7 +66,7 @@ public class Clue implements Serializable {
     /**
      * 客户电话
      */
-    @NotBlank(message = "{clue.name.notblank}")
+    @NotBlank(message = "{clue.name.notBlank}")
     private String phone;
 
     /**

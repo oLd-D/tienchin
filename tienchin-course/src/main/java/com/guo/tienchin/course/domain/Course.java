@@ -27,28 +27,28 @@ public class Course implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @TableId(value = "course_id", type = IdType.AUTO)
-    @NotNull(message = "{course.id.notnull}",groups = {EditGroup.class})
+    @NotNull(message = "{course.id.notNull}",groups = {EditGroup.class})
     @Excel(name = "课程编号")
     private Integer courseId;
 
     /**
      * 课程类型 1 舞蹈类 2 游泳类 3 拳击类
      */
-    @NotNull(message = "{course.type.notnull}",groups = {AddGroup.class,EditGroup.class})
+    @NotNull(message = "{course.type.notNull}",groups = {AddGroup.class,EditGroup.class})
     @Excel(name = "课程类型", readConverterExp = "1=舞蹈类,2=游泳类,3=拳击类")
     private Integer type;
 
     /**
      * 课程名
      */
-    @NotBlank(message = "{course.name.notblank}",groups = {AddGroup.class,EditGroup.class})
+    @NotBlank(message = "{course.name.notBlank}",groups = {AddGroup.class,EditGroup.class})
     @Excel(name = "课程名称")
     private String name;
 
     /**
      * 课程价格
      */
-    @NotNull(message = "{course.price.notnull}",groups = {AddGroup.class,EditGroup.class})
+    @NotNull(message = "{course.price.notNull}",groups = {AddGroup.class,EditGroup.class})
     @Min(value = 0, message = "{course.price.invalid}",groups = {AddGroup.class,EditGroup.class})
     @Excel(name = "课程价格")
     private Double price;
@@ -56,14 +56,14 @@ public class Course implements Serializable {
     /**
      * 课程适用人群
      */
-    @NotNull(message = "{course.applyTo.notnull}",groups = {AddGroup.class,EditGroup.class})
+    @NotNull(message = "{course.applyTo.notNull}",groups = {AddGroup.class,EditGroup.class})
     @Excel(name = "适用人群", readConverterExp = "1=零基础,2=简单,3=中等,4=困难")
     private Integer applyTo;
 
     /**
      * 课程简介
      */
-    @NotBlank(message = "{course.info.notblank}",groups = {AddGroup.class,EditGroup.class})
+    @NotBlank(message = "{course.info.notBlank}",groups = {AddGroup.class,EditGroup.class})
     @Excel(name = "课程简介")
     private String info;
 

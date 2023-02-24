@@ -10,14 +10,14 @@ import javax.validation.constraints.*;
 import java.time.LocalDateTime;
 
 public class ActivityVO extends BaseEntity {
-    @NotNull(message = "{activity.id.notnull}",groups = EditGroup.class)
+    @NotNull(message = "{activity.id.notNull}",groups = EditGroup.class)
     @Excel(name = "活动ID")
     private Integer activityId;
 
     /**
      * 活动名称
      */
-    @NotBlank(message = "{activity.name.notblank}",groups = {AddGroup.class,EditGroup.class})
+    @NotBlank(message = "{activity.name.notBlank}",groups = {AddGroup.class,EditGroup.class})
     @Size(min = 0, max = 20,message = "{activity.name.size}",groups = {AddGroup.class,EditGroup.class})
     @Excel(name = "活动名称")
     private String name;
@@ -25,7 +25,7 @@ public class ActivityVO extends BaseEntity {
     /**
      * 渠道ID
      */
-    @NotNull(message = "{activity.channelId.notnull}",groups = {AddGroup.class,EditGroup.class})
+    @NotNull(message = "{activity.channelId.notNull}",groups = {AddGroup.class,EditGroup.class})
     @Excel(name = "渠道ID")
     private Integer channelId;
     @Excel(name = "渠道名称")
@@ -34,7 +34,7 @@ public class ActivityVO extends BaseEntity {
     /**
      * 活动简介
      */
-    @NotBlank(message = "{activity.info.notnull}",groups = {AddGroup.class,EditGroup.class})
+    @NotBlank(message = "{activity.info.notNull}",groups = {AddGroup.class,EditGroup.class})
     @Size(min = 0, max = 255,message = "{activity.info.size}",groups = {AddGroup.class,EditGroup.class})
     @Excel(name = "活动简介")
     private String info;
@@ -42,7 +42,7 @@ public class ActivityVO extends BaseEntity {
     /**
      * 活动类型 1 折扣券 2 代金券
      */
-    @NotNull(message = "{activity.type.notnull}",groups = {AddGroup.class,EditGroup.class})
+    @NotNull(message = "{activity.type.notNull}",groups = {AddGroup.class,EditGroup.class})
     @Excel(name = "活动类型", readConverterExp = "1=折扣券,2=代金券")
     private Integer type;
 
@@ -72,7 +72,7 @@ public class ActivityVO extends BaseEntity {
     /**
      * 活动开始时间
      */
-    @NotNull(message = "{activity.beginTime.notnull}",groups = {AddGroup.class,EditGroup.class})
+    @NotNull(message = "{activity.beginTime.notNull}",groups = {AddGroup.class,EditGroup.class})
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "Asia/Shanghai")
     @Excel(name = "活动开始时间",dateFormat = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime beginTime;
@@ -80,7 +80,7 @@ public class ActivityVO extends BaseEntity {
     /**
      * 活动结束时间
      */
-    @NotNull(message = "{activity.endTime.notnull}",groups = {AddGroup.class,EditGroup.class})
+    @NotNull(message = "{activity.endTime.notNull}",groups = {AddGroup.class,EditGroup.class})
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "Asia/Shanghai")
     @Excel(name = "活动结束时间",dateFormat = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime endTime;

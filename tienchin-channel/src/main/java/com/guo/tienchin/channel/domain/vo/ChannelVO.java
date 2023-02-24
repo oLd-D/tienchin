@@ -15,7 +15,7 @@ public class ChannelVO extends BaseEntity {
     /**
      * 渠道名称
      */
-    @NotBlank(message = "{channel.name.notnull}")
+    @NotBlank(message = "{channel.name.notNull}")
     private String channelName;
 
     /**
@@ -23,7 +23,7 @@ public class ChannelVO extends BaseEntity {
      */
     @Max(value = 1,message = "{channel.status.invalid}")
     @Min(value = 0,message = "{channel.status.invalid}")
-    @NotNull(message = "{channel.status.notnull}")
+    @NotNull(message = "{channel.status.notNull}")
     private Byte status;
 
     /**
@@ -34,7 +34,7 @@ public class ChannelVO extends BaseEntity {
     /**
      * 渠道类型: 1 线上渠道 2 线下渠道
      */
-    @NotNull(message = "{channel.type.notnull}")
+    @NotNull(message = "{channel.type.notNull}")
     @Min(value = 1, message = "channel.type.invalid")
     @Max(value = 2, message = "channel.type.invalid")
     private Integer type;

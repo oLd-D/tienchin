@@ -3,6 +3,8 @@ package com.guo.tienchin.clue.domain;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
@@ -33,21 +35,25 @@ public class Assignment implements Serializable {
     /**
      * 线索或商机的ID
      */
+    @NotNull(message = "{assignment.assignId.notNull}")
     private Integer assignId;
 
     /**
      * 被分配人ID
      */
+    @NotNull(message = "{assignment.userId.notNull}")
     private Long userId;
 
     /**
      * 被分配人用户名
      */
+    @NotNull(message = "{assignment.userName.notNull}")
     private String userName;
 
     /**
      * 被分配人部门ID
      */
+    @NotNull(message = "{assignment.deptId.notNull}")
     private Long deptId;
 
     /**

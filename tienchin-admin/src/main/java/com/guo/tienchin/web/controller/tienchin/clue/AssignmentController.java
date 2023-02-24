@@ -5,6 +5,7 @@ import com.guo.tienchin.clue.service.IAssignmentService;
 import com.guo.tienchin.common.core.domain.AjaxResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -28,7 +29,7 @@ public class AssignmentController {
 
     @PostMapping
     @PreAuthorize("hasPermission('tienchin:clue:assignment')")
-    public AjaxResult assignClue(@RequestBody Assignment assignment) {
+    public AjaxResult assignClue(@Validated @RequestBody Assignment assignment) {
         return assignmentService.assignClue(assignment);
     }
 }
